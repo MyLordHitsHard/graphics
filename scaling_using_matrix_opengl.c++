@@ -53,3 +53,42 @@ void drawPoint()
     glFlush();
 
 }
+
+void scaling (void) {
+    drawPoint();
+    Sleep(1000);
+    double scalMat[3][3] = {{1.5, 0, 0}, {0, 1.5, 0}, {0, 0, 1}};
+
+
+        int temp[3][1];
+        temp[0][0] = vertice1[0][0];
+        temp[1][0] = vertice1[1][0];
+        temp[2][0] = vertice1[2][0];
+        vertice1[0][0] = scalMat[0][0]*temp[0][0]+scalMat[0][1]*temp[1][0]+scalMat[0][2]*temp[2][0];
+        vertice1[1][0] = scalMat[1][0]*temp[0][0]+scalMat[1][1]*temp[1][0]+scalMat[1][2]*temp[2][0];
+        vertice1[2][0] = scalMat[2][0]*temp[0][0]+scalMat[2][1]*temp[1][0]+scalMat[2][2]*temp[2][0];
+        temp[0][0] = vertice2[0][0];
+        temp[1][0] = vertice2[1][0];
+        temp[2][0] = vertice2[2][0];
+        vertice2[0][0] = scalMat[0][0]*temp[0][0]+scalMat[0][1]*temp[1][0]+scalMat[0][2]*temp[2][0];
+        vertice2[1][0] = scalMat[1][0]*temp[0][0]+scalMat[1][1]*temp[1][0]+scalMat[1][2]*temp[2][0];
+        vertice2[2][0] = scalMat[2][0]*temp[0][0]+scalMat[2][1]*temp[1][0]+scalMat[2][2]*temp[2][0];
+        temp[0][0] = vertice3[0][0];
+        temp[1][0] = vertice3[1][0];
+        temp[2][0] = vertice3[2][0];
+        vertice3[0][0] = scalMat[0][0]*temp[0][0]+scalMat[0][1]*temp[1][0]+scalMat[0][2]*temp[2][0];
+        vertice3[1][0] = scalMat[1][0]*temp[0][0]+scalMat[1][1]*temp[1][0]+scalMat[1][2]*temp[2][0];
+        vertice3[2][0] = scalMat[2][0]*temp[0][0]+scalMat[2][1]*temp[1][0]+scalMat[2][2]*temp[2][0];
+        temp[0][0] = vertice4[0][0];
+        temp[1][0] = vertice4[1][0];
+        temp[2][0] = vertice4[2][0];
+        vertice4[0][0] = scalMat[0][0]*temp[0][0]+scalMat[0][1]*temp[1][0]+scalMat[0][2]*temp[2][0];
+        vertice4[1][0] = scalMat[1][0]*temp[0][0]+scalMat[1][1]*temp[1][0]+scalMat[1][2]*temp[2][0];
+        vertice4[2][0] = scalMat[2][0]*temp[0][0]+scalMat[2][1]*temp[1][0]+scalMat[2][2]*temp[2][0];
+
+        drawPoint();
+
+
+
+}
+
