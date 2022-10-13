@@ -36,3 +36,26 @@ maax2 = maax1 * (++counter);
 }
 return maax2;
 }
+
+
+
+
+
+
+int main() {
+int no, ex, pr, lcm, counter = 0;
+double utilization = 0;
+int totalExecutionTime = 0;
+vector<Process> data;
+Process temp;
+cout << "Enter number of processes: " << endl;
+cin >> no;
+cout << "Enter data for each process: " << endl;
+for (int i = 1; i <= no; i++) {
+cout << "P" << i << " \n"
+<< "Execution time : ";
+cin >> ex;
+cout << "Period : ";
+cin >> pr;
+cout << endl;
+temp.p_Id = i;
